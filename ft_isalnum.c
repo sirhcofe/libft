@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chenlee <chenlee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 17:18:42 by chenlee           #+#    #+#             */
 /*   Updated: 2022/04/13 17:45:28 by chenlee          ###   ########.fr       */

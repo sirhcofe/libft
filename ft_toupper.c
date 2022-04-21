@@ -1,27 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/04/06 18:27:12 by chenlee           #+#    #+#             */
-/*   Updated: 2022/04/13 17:07:48 by chenlee          ###   ########.fr       */
+/*   Created: 2022/04/20 20:17:04 by chenlee           #+#    #+#             */
+/*   Updated: 2022/04/20 20:17:04 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_bzero(void *s, size_t n)
+int ft_toupper(int c)
 {
-	size_t			i;
-	unsigned char	*str;
-
-	i = 0;
-	str = (unsigned char *)s;
-	while (i < n)
-	{
-		str[i] = 48;
-		i++;
-	}
+    if (c >= 97 && c <= 122)
+        c = c - 32;
+    return (c);
 }

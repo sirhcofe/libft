@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chenlee <chenlee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:13:44 by chenlee           #+#    #+#             */
 /*   Updated: 2022/04/20 17:39:04 by chenlee          ###   ########.fr       */

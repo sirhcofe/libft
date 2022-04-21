@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chenlee <chenlee@student.42.fr>            +#+  +:+       +#+        */
+/*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/20 19:34:12 by chenlee           #+#    #+#             */
 /*   Updated: 2022/04/20 19:43:08 by chenlee          ###   ########.fr       */

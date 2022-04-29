@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*   By: chenlee <chenlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 18:27:12 by chenlee           #+#    #+#             */
-/*   Updated: 2022/04/13 17:07:48 by chenlee          ###   ########.fr       */
+/*   Updated: 2022/04/29 21:11:27 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ void	*ft_bzero(void *s, size_t n)
 		str[i] = 48;
 		i++;
 	}
+	return (0);
 }

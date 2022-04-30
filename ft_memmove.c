@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/07 18:13:44 by chenlee           #+#    #+#             */
-/*   Updated: 2022/04/29 21:17:46 by chenlee          ###   ########.fr       */
+/*   Updated: 2022/04/30 16:23:25 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,10 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (dst);
 	if (dest > srce)
 	{
-		while (i < len)
-		{
-			dest[i] = srce[i];
-			i++;
-		}
+		while (len--)
+			dest[len] = srce[len];
 		return (dst);
 	}
-	i = 0;
 	while (i < len)
 	{
 		dest[i] = srce[i];

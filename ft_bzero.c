@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 18:27:12 by chenlee           #+#    #+#             */
-/*   Updated: 2022/04/29 21:11:27 by chenlee          ###   ########.fr       */
+/*   Updated: 2022/04/30 16:26:15 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	*ft_bzero(void *s, size_t n)
 	str = (unsigned char *)s;
 	while (i < n)
 	{
-		str[i] = 48;
+		str[i] = 0;
 		i++;
 	}
 	return (0);

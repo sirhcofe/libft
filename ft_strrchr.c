@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/22 15:47:49 by chenlee           #+#    #+#             */
-/*   Updated: 2022/04/22 17:26:50 by chenlee          ###   ########.fr       */
+/*   Updated: 2022/04/30 14:50:58 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strrchr(const char *s, int c)
 	while (i >= 0)
 	{
 		if (s[i] == (char)c)
-			return ((char*)(s + i));
+			return ((char *)(s + i));
 		i--;
 	}
 	return (0);

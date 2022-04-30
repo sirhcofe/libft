@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
+/*   By: chenlee <chenlee@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/06 16:57:40 by chenlee           #+#    #+#             */
-/*   Updated: 2022/04/13 17:08:13 by chenlee          ###   ########.fr       */
+/*   Updated: 2022/04/30 15:02:48 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ int	ft_isdigit(int c)
 {
 	if (c >= 48 && c <= 57)
 		return (c);
+	return (0);
 }

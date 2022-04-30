@@ -6,14 +6,13 @@
 #    By: chenlee <chenlee@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/29 21:09:51 by chenlee           #+#    #+#              #
-#    Updated: 2022/04/29 21:26:57 by chenlee          ###   ########.fr        #
+#    Updated: 2022/04/30 16:00:50 by chenlee          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS = ft_memset.c			\
 		ft_bzero.c			\
 		ft_memcpy.c			\
-		ft_memccpy.c		\
 		ft_memmove.c 		\
 		ft_memchr.c			\
 		ft_memcmp.c			\
@@ -34,7 +33,7 @@ SRCS = ft_memset.c			\
 		ft_atoi.c			\
 		ft_calloc.c			\
 		ft_strdup.c			\
-		ft_substr.c			\
+		##ft_substr.c			\
 		ft_strjoin.c 		\
 		ft_strtrim.c		\
 		ft_split.c			\

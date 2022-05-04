@@ -33,10 +33,10 @@ SRCS = ft_memset.c			\
 		ft_atoi.c			\
 		ft_calloc.c			\
 		ft_strdup.c			\
-		##ft_substr.c			\
+		ft_substr.c			\
 		ft_strjoin.c 		\
 		ft_strtrim.c		\
-		ft_split.c			\
+		##ft_split.c			\
 		ft_itoa.c			\
 		ft_strmapi.c		\
 		ft_putchar_fd.c		\
@@ -64,7 +64,7 @@ OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
 OBJSB = $(SRCSB:.c=.o)
 OBJECTS_BONUS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJSB))
 
-CC = clang
+CC = gcc
 
 CC_FLAGS = -Wall -Wextra -Werror
 

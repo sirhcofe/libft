@@ -36,8 +36,8 @@ SRCS = ft_memset.c			\
 		ft_substr.c			\
 		ft_strjoin.c 		\
 		ft_strtrim.c		\
-		##ft_split.c			\
 		ft_itoa.c			\
+		##ft_split.c		\
 		ft_strmapi.c		\
 		ft_putchar_fd.c		\
 		ft_putstr_fd.c		\
@@ -64,7 +64,7 @@ OBJECTS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJS))
 OBJSB = $(SRCSB:.c=.o)
 OBJECTS_BONUS_PREFIXED = $(addprefix $(OBJS_DIR), $(OBJSB))
 
-CC = gcc
+CC = clang
 
 CC_FLAGS = -Wall -Wextra -Werror
 
@@ -90,3 +90,7 @@ re: fclean all
 bonus: $(OBJECTS_BONUS_PREFIXED)
 	@ar r $(NAME) $(OBJECTS_BONUS_PREFIXED)
 	@echo "Libft Bonus Done !"
+
+so:
+	$(CC) -fPIC $(CFLAGS) $(SRC)
+	gcc -shared -o libft.so $(OBJ)

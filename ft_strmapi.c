@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substrr.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/02 01:21:20 by chenlee           #+#    #+#             */
-/*   Updated: 2022/05/02 01:21:20 by chenlee          ###   ########.fr       */
+/*   Created: 2022/05/04 22:54:57 by chenlee           #+#    #+#             */
+/*   Updated: 2022/05/04 22:54:57 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, size_t start, size_t len)
+char	*ft_strmapi(char const *s, char (*f)(size_t, char))
 {
-	char	*ptr;
 	size_t	i;
+	char	*ptr;
 
-	if (!s || len == 0)
+	i = 0;
+	if (!s || !f)
 		return (0);
-	if (start > ft_strlen(s))
-		return (0);
-	ptr = malloc(sizeof(char) * (len + 1));
+	ptr = ft_strdup(s);
 	if (!ptr)
 		return (0);
-	i = 0;
-	while (i < len)
+	while (ptr[i])
 	{
-		ptr[i] = s[i + start];
+		ptr[i] = (*f)(i, s[i]);
 		i++;
 	}
-	ptr[i] = '\0';
 	return (ptr);
 }

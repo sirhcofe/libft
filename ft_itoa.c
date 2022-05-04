@@ -10,9 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include "libft.h"
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	get_length(int n)
 {

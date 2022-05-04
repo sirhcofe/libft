@@ -1,35 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substrr.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/05/02 01:21:20 by chenlee           #+#    #+#             */
-/*   Updated: 2022/05/02 01:21:20 by chenlee          ###   ########.fr       */
+/*   Created: 2022/05/04 23:19:29 by chenlee           #+#    #+#             */
+/*   Updated: 2022/05/04 23:19:29 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_substr(char const *s, size_t start, size_t len)
+void	ft_putnbr_fd(int n, int fd)
 {
-	char	*ptr;
-	size_t	i;
+	char	c;
 
-	if (!s || len == 0)
-		return (0);
-	if (start > ft_strlen(s))
-		return (0);
-	ptr = malloc(sizeof(char) * (len + 1));
-	if (!ptr)
-		return (0);
-	i = 0;
-	while (i < len)
+	if (n == -2147483648)
+		write (fd, "-2147483648", 11);
+	else
 	{
-		ptr[i] = s[i + start];
-		i++;
-	}
-	ptr[i] = '\0';
-	return (ptr);
+		if (n < 0)
+		{
+			write (fd, "-", 1);
+			n *= -1;
+			ft_putnbr_fd(n, fd);
+		}
+		else if (n > 0)
+		{
+			ft_putnbr_fd((n / 10), fd);
+			c = (n % 10) + '0';
+			write (fd, &c, 1);
+		}
+	}	
 }

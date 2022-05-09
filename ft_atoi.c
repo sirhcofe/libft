@@ -29,7 +29,7 @@ int	ft_atoi(const char *str)
 		sign = sign * -1;
 		i++;
 	}
-	if (str[i] == '+')
+	else if (str[i] == '+')
 		i++;
 	while (ft_isdigit(str[i]))
 		nbr = (nbr * 10) + (str[i++] - '0');

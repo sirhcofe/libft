@@ -6,7 +6,7 @@
 /*   By: chenlee <chenlee@student.42kl.edu.my>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/03 17:48:30 by chenlee           #+#    #+#             */
-/*   Updated: 2022/05/03 17:48:30 by chenlee          ###   ########.fr       */
+/*   Updated: 2022/05/05 16:31:20 by chenlee          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,13 @@ char	*ft_strtrim(char const *s1, char const *set)
 		return (ft_strdup(s1));
 	start = 0;
 	end = ft_strlen(s1);
-	while (s1[start] && s1_in_set(s1[start], set))
+	while (s1_in_set(s1[start], set))
 		start++;
-	while (end > start && s1_in_set(s1[end], set))
+	while (end > start && s1_in_set(s1[end - 1], set))
 		end--;
 	if (end - start <= 0)
-		return (0);
+		return (ft_strdup(""));
 	else
 		ptr = ft_substr(s1, start, ((size_t)end - (size_t)start));
-	return (ptr);	
+	return (ptr);
 }

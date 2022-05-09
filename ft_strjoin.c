@@ -19,7 +19,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		s2_len;
 
 	if (!s1 && !s2)
-		return (ft_strdup(""));
+		return (0);
 	else if (s1 && !s2)
 		return (ft_strdup(s1));
 	else if (!s1 && s2)
@@ -29,7 +29,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	ptr = malloc(sizeof(char) * (s1_len + s2_len + 1));
 	if (!ptr)
 		return (0);
-	ft_memcpy (ptr, s1, s1_len);
-	ft_memcpy ((ptr + s1_len), s2, s2_len);
+	ft_memmove (ptr, s1, s1_len);
+	ft_memmove ((ptr + s1_len), s2, s2_len);
+	ptr[s1_len + s2_len] = '\0';
 	return (ptr);
 }

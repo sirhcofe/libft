@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	get_length(int n)
+int	get_length(long n)
 {
 	int	count;
 
@@ -22,7 +22,9 @@ int	get_length(int n)
 		n *= -1;
 		count++;
 	}
-	while (n >= 10)
+	if (n == 0)
+		return (count = 1);
+	while (n > 0)
 	{
 		count++;
 		n /= 10;
@@ -30,23 +32,16 @@ int	get_length(int n)
 	return (count);
 }
 
-char	*ft_itoa(int n)
+char	*ft_putnbr(char *ptr, long n, int sign, size_t len)
 {
-	char	*ptr;
-	int		sign;
-	size_t	len;
-
-	sign = (n < 0);
-	len = (get_length(n) + 1);
-	ptr = malloc(sizeof(char) * (len));
-	if (!ptr)
-		return (0);
 	if (sign == 1)
 	{
 		ptr[0] = '-';
 		n *= -1;
 	}
-	ptr[len] = '\n';
+	if (n == 0)
+		ptr[0] = '0';
+	ptr[len] = '\0';
 	while (n > 0)
 	{
 		ptr[len - 1] = (n % 10) + '0';
@@ -54,4 +49,21 @@ char	*ft_itoa(int n)
 		len--;
 	}
 	return (ptr);
+}
+
+char	*ft_itoa(int m)
+{
+	long	n;
+	char	*ptr;
+	int		sign;
+	size_t	len;
+
+	n = m;
+	sign = (n < 0);
+	len = get_length(n);
+	ptr = malloc(sizeof(char) * (len + 1));
+	if (!ptr)
+		return (0);
+	else
+		return (ft_putnbr(ptr, n, sign, len));
 }

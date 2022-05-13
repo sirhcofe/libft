@@ -82,3 +82,17 @@ char	**ft_split(char const *s, char c)
 	ptrptr[x] = NULL;
 	return (ptrptr);
 }
+
+// ft_count       - returns total number of strings seperated by deliminator
+
+// ft_fillpointer - fills *ptr with seperated strings
+//					first while() loop calculate the length of string
+//					second while() loop fills in char in memory allocated ptr
+
+// ft_split	      - malloc ptrptr based on the number of strings separated
+//					first while() loop tries to fill in string ptr in ptrptr
+//					second while() loop skips deliminator in string s
+//					calls in ft_fillpointer to generate seperated-string ptr
+//					fill ptrptr with ptr then repeat ptrptr++
+
+// ---------------sorry for my shit explaination---------------

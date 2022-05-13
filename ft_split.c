@@ -42,7 +42,7 @@ char	*ft_fillptr(char const *s, char c, int i)
 	j = 0;
 	while (s[i + j] && ft_isascii(s[i + j]) && s[i + j] != c)
 		j++;
-	ptr = malloc(sizeof(char *) * (j + 1));
+	ptr = malloc(sizeof(char) * (j + 1));
 	if (!ptr)
 		return (0);
 	y = 0;
@@ -68,7 +68,7 @@ char	**ft_split(char const *s, char c)
 		return (0);
 	i = 0;
 	x = 0;
-	while (x < (ft_count(s, c) + 1) && (size_t)i < (ft_strlen(s) + 1)
+	while (x < (ft_count(s, c)) && (size_t)i < (ft_strlen(s) + 1)
 		&& ft_isascii(s[i]))
 	{
 		while (s[i] == c)
@@ -79,18 +79,6 @@ char	**ft_split(char const *s, char c)
 		ptrptr[x++] = ptr;
 		i += ft_strlen(ptr);
 	}
-	ptrptr[x - 1] = NULL;
+	ptrptr[x] = NULL;
 	return (ptrptr);
-}
-
-#include <stdio.h>
-
-int	main()
-{
-	char	*s = "     lolol";
-	char	c = ' ';
-	char	**result = ft_split(s, c);
-
-	printf("result[0] = %s\n", result[0]);
-	printf("result[1] = %s\n", result[1]);
 }

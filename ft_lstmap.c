@@ -11,31 +11,62 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	new_lst;
-	t_list	head;
+	t_list	*newlst;
+	t_list	*temp;
 
-	if (!lst || !f || !del)
+	if (!lst || !f)
 		return (0);
-	head = NULL;
+	newlst = NULL;
 	while (lst)
 	{
-		new_lst = ft_lstnew(f(lst->content));
-		if (!new_list)
+		temp = ft_lstnew((*f)(lst->content));
+		if (!temp)
 		{
-			while (head)
+			while (newlst)
 			{
-				new_lst = head->next;
-				(del)(head->content);
-				free(head);
-				head = new_lst;
+				temp = newlst->next;
+				(*del)(newlst->content);
+				free(newlst);
+				newlst = temp;
 			}
 			lst = NULL;
 			return (0);
 		}
-		ft_lstadd_back(head, new);
+		ft_lstadd_back(&newlst, temp);
 		lst = lst->next;
 	}
-	return (head);
+	return (newlst);
 }
+
+// {
+// 	t_list	*new_lst;
+// 	t_list	*temp;
+
+// 	if (!lst || !f || !del)
+// 		return (0);
+// 	new_lst = NULL;
+// 	while (lst)
+// 	{
+// 		new_lst = ft_lstnew(f(lst->content));
+// 		if (!new_lst)
+// 		{
+// 			while (head)
+// 			{
+// 				new_lst = head->next;
+// 				(del)(head->content);
+// 				free(head);
+// 				head = new_lst;
+// 			}
+// 			lst = NULL;
+// 			return (0);
+// 		}
+// 		else
+// 			ft_lstadd_back(&head, new_lst);
+// 		lst = lst->next;
+// 	}
+// 	new_lst->next = 0;
+// 	return (new_lst);
+// }

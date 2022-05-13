@@ -14,7 +14,7 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	if (!lst)
+	if (lst == NULL)
 		return (0);
 	while (lst)
 	{
@@ -24,3 +24,12 @@ t_list	*ft_lstlast(t_list *lst)
 	}
 	return (lst);
 }
+
+// t_list	*ft_lstlast(t_list *lst)
+// {
+// 	if (lst == NULL)
+// 		return (0);
+// 	while (lst && (lst->next == NULL))
+// 		lst = lst->next;
+// 	return (lst);
+// }

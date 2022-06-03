@@ -68,13 +68,13 @@ OBJECTS_BONUS_PREFIXED	= $(addprefix $(OBJS_DIR), $(BONUS_OBJS))
 CC						= gcc
 CFLAGS					= -Wall -Wextra -Werror
 
-$(OBJS_DIR)%.o:		%.c libft.h
+$(OBJS_DIR)%.o:		%.c 
 					@mkdir -p $(OBJS_DIR)
 					@echo "Compiling: $<"
 					@gcc $(CFLAGS) -c $< -o $@
 
-$(NAME):			$(OBJECTS_PREFIXED)
-					@ar rc $(NAME) $(OBJECTS_PREFIXED)
+$(NAME):			$(OBJECTS_PREFIXED) $(OBJECTS_BONUS_PREFIXED)
+					@ar rc $(NAME) $(OBJECTS_PREFIXED) $(OBJECTS_BONUS_PREFIXED)
 					@echo "  -----------------"
 					@echo " |   Libft Done!   |"
 					@echo "  -----------------"
